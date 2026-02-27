@@ -28,7 +28,7 @@ print("\nMissing Values:")
 print(df.isna().sum())
 
 # 3. Identify data quality issues
-
+# Everything was already standardized, there are some null values but only of a small percentage. To handle missing values in square foot, we imputed median square feet and because price is a key variable, we removed rows that are missing that value. There aren't any invalid values
 # 4. Document findings
 
 # Step 3: Data Cleaning  (make sure you record and present your assumptions and decisions)
