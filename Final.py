@@ -123,7 +123,7 @@ print(df_clean.groupby('location').apply(lambda x:(x['price'].div(x['square_feet
 
 # %%
 age_price_corr = df_clean['age_years'].corr(df_clean['price'])
-print(age_price_corr)
+print("Correlation between age of property and price: " + age_price_corr)
 
 plt.scatter(df_clean['age_years'],df_clean['price'], alpha=0.6,s=5)
 plt.xlabel("Age (Years)")
@@ -155,7 +155,7 @@ plt.show()
 # There doesn't seem to be a strong correlation between bedrooms and price. On the scatterplot created, listing prices for properties don't increase or decrease with the number of bedrooms the houses have. For a 1 bedroom house, listing prices could range from $50k to $1M, and for a 3 bedroom house, it could be from $50k to 900k, and the listing prices for a 2 bedroom house are higher than for a 5 bedroom house.
 
 bedroom_price_corr = df_clean['bedrooms'].corr(df_clean['price'])
-print(bedroom_price_corr)
+print("Correlation between number of bedrooms and price: " + bedroom_price_corr)
 
 # Create scatterplot, fix the size for h and w
 plt.figure(figsize=(8,5)) 
@@ -197,7 +197,7 @@ plt.savefig("garage_vs_price.png")
 plt.show()
 
 garage_price_corr = df_clean['garage'].corr(df_clean['price'])
-print(garage_price_corr)
+print("Correlation between whether a property has a garage and price: " + garage_price_corr)
 
 # %% [markdown]
 # ### Question 6
